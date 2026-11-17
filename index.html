@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Черновой проект о маленьких породах собак: знакомство с породами и основы заботы.">
+  <title>Рядом — маленькие собаки, большая забота</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <div class="demo-bar">ДЕМО-ПРОЕКТ <span aria-hidden="true">✳</span> Здесь пока нет объявлений и продажи собак</div>
+  <header class="site-header wrap">
+    <a class="brand" href="#top" aria-label="Рядом — на главную"><span class="brand-mark" aria-hidden="true">✳</span> рядом<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Меню <span aria-hidden="true">☰</span></button>
+    <nav class="nav" id="navigation" aria-label="Основная навигация">
+      <a href="#breeds">Породы</a><a href="#care">О заботе</a><a href="#about">О проекте</a>
+      <a class="nav-cta" href="#breeds">Изучить породы <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="intro wrap" id="top" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="line"></span> НЕБОЛЬШИЕ СОБАКИ · БОЛЬШОЕ СЕРДЦЕ</p>
+        <h1 id="intro-title">Маленькие<br>лапки.<br><em>Большая</em><br>любовь<span class="accent">.</span></h1>
+        <p class="intro-text">Знакомство с маленькими породами начинается не с выбора щенка, а с понимания друг друга.</p>
+        <div class="intro-actions"><a class="button button-dark" href="#breeds">Найти свою породу <span aria-hidden="true">↗</span></a><a class="text-link" href="#care">О заботе <span aria-hidden="true">↓</span></a></div>
+        <p class="intro-note"><span aria-hidden="true">✳</span> Знакомимся без спешки и обязательств</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <div class="art-label">ХОРОШО БЫТЬ <em>вместе</em></div>
+        <svg viewBox="0 0 600 650" role="presentation" xmlns="http://www.w3.org/2000/svg">
+          <path d="M46 446C18 309 79 129 223 82c145-47 297 28 332 158 39 148-26 307-177 340C221 615 73 576 46 446Z" fill="#dfc7a7"/>
+          <path d="M62 493c88-56 150-50 215-33 80 22 143 16 257-40 4 84-53 163-151 181-137 26-258-14-321-108Z" fill="#b8b790"/>
+          <path d="M195 450c-15-78 13-132 56-152l118 3c46 26 66 85 50 150l-13 60H208Z" fill="#eee3cf"/>
+          <path d="M207 252c-48-41-88-31-100 17-11 43 14 103 63 124l53-65ZM390 247c49-43 89-32 101 16 11 43-14 104-63 125l-53-65Z" fill="#9d704f"/>
+          <path d="M184 290c1-86 45-139 116-139s116 53 117 139c2 81-41 137-117 137S182 371 184 290Z" fill="#f4e8d5"/>
+          <path d="M253 332c-1-30 20-51 47-51s48 21 47 51c-1 35-22 53-47 53s-46-18-47-53Z" fill="#fff6e8"/>
+          <ellipse cx="252" cy="286" rx="8" ry="11" fill="#382d28"/><ellipse cx="348" cy="286" rx="8" ry="11" fill="#382d28"/>
+          <path d="M284 324c0-9 7-13 16-13s16 4 16 13c0 7-9 14-16 14s-16-7-16-14Z" fill="#382d28"/>
+          <path d="M300 338v10m-18 2c5 9 13 10 18 2 5 8 13 7 18-2" fill="none" stroke="#79574a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M224 431c47 18 103 19 153 0" fill="none" stroke="#b46b4e" stroke-width="12"/><circle cx="300" cy="447" r="11" fill="#d9ac64"/>
+          <path d="M152 467c-22 9-27 35-11 49 14 13 49 7 63-5m245-44c22 9 27 35 11 49-14 13-49 7-63-5" fill="#eee3cf" stroke="#eee3cf" stroke-width="18" stroke-linecap="round"/>
+        </svg>
+        <span class="art-caption">иллюстрация, не объявление</span>
+        <span class="art-stamp">С ЗАБОТОЙ<br><strong>♥</strong><br>О КАЖДОМ</span>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true"><span>МАЛЕНЬКИЕ ПОРОДЫ</span> ✳ <span>ОСОЗНАННЫЙ ВЫБОР</span> ✳ <span>БОЛЬШАЯ ЗАБОТА</span> ✳ <span>МАЛЕНЬКИЕ ПОРОДЫ</span> ✳ <span>ОСОЗНАННЫЙ ВЫБОР</span> ✳</div>
+    <section class="catalog wrap section" id="breeds" aria-labelledby="breeds-title">
+      <div class="section-top"><div><p class="eyebrow"><span class="line"></span> ЗНАКОМСТВО С ПОРОДАМИ</p><h2 id="breeds-title">У каждого свой <em>характер.</em></h2></div><p>Породы разные, как и мы. Узнайте об особенностях, чтобы понять, какой компаньон может подойти именно вам.</p></div>
+      <div class="catalog-tools"><div class="filters" role="group" aria-label="Фильтр пород по особенностям"><button class="filter active" type="button" data-filter="all" aria-pressed="true">Все породы</button><button class="filter" type="button" data-filter="уход" aria-pressed="false">Уход за шерстью</button><button class="filter" type="button" data-filter="прогулки" aria-pressed="false">Любят активность</button><button class="filter" type="button" data-filter="обучение" aria-pressed="false">Любят обучение</button></div><p class="result-count" id="result-count" aria-live="polite"></p></div>
+      <div class="breed-grid" id="breed-grid">
+        <article class="breed-card" data-traits="уход,обучение"><div class="breed-image maltese"><span class="card-number">01 / ПОРОДА</span><span class="breed-letter">М</span><span class="image-note">ЗНАКОМИМСЯ БЛИЖЕ ↗</span></div><div class="breed-body"><div><h3>Мальтийская болонка</h3><p>Длинная шерсть нуждается в регулярном уходе; контакт и занятия важны для благополучия собаки.</p></div><span class="tag">УХОД ЗА ШЕРСТЬЮ</span></div></article>
+        <article class="breed-card" data-traits="прогулки,обучение"><div class="breed-image corgi"><span class="card-number">02 / ПОРОДА</span><span class="breed-letter">К</span><span class="image-note">ЗНАКОМИМСЯ БЛИЖЕ ↗</span></div><div class="breed-body"><div><h3>Вельш-корги пемброк</h3><p>Энергичная пастушья порода: ей нужны прогулки, занятия и внимание к физической нагрузке.</p></div><span class="tag">ЛЮБЯТ АКТИВНОСТЬ</span></div></article>
+        <article class="breed-card" data-traits="прогулки"><div class="breed-image chi"><span class="card-number">03 / ПОРОДА</span><span class="breed-letter">Ч</span><span class="image-note">ЗНАКОМИМСЯ БЛИЖЕ ↗</span></div><div class="breed-body"><div><h3>Чихуахуа</h3><p>Маленький размер не отменяет потребности в прогулках, бережном общении и воспитании.</p></div><span class="tag">БЕРЕЖНОЕ ОБЩЕНИЕ</span></div></article>
+        <article class="breed-card" data-traits="уход,обучение"><div class="breed-image poodle"><span class="card-number">04 / ПОРОДА</span><span class="breed-letter">П</span><span class="image-note">ЗНАКОМИМСЯ БЛИЖЕ ↗</span></div><div class="breed-body"><div><h3>Той-пудель</h3><p>Как правило, любит совместные занятия. Кудрявой шерсти нужны расчёсывание и стрижка.</p></div><span class="tag">ЛЮБЯТ ОБУЧЕНИЕ</span></div></article>
+      </div>
+      <div class="catalog-foot"><p><span aria-hidden="true">✳</span> Это познавательные карточки пород, не объявления о продаже.</p><a class="text-link" href="#care">Что важно знать о заботе <span aria-hidden="true">↗</span></a></div>
+      <noscript><p class="noscript">Для работы фильтров включите JavaScript. Все карточки доступны ниже.</p></noscript>
+    </section>
+    <section class="care" id="care" aria-labelledby="care-title"><div class="wrap care-layout"><div class="care-title"><p class="eyebrow"><span class="line"></span> ПРЕЖДЕ ВСЕГО — ЗАБОТА</p><h2 id="care-title">Любовь — это <em>ежедневный выбор.</em></h2><p>Даже самой маленькой собаке нужны время, внимание и подходящие именно ей условия.</p></div><div class="care-list"><div><span>01</span><div><h3>Здоровье и безопасность</h3><p>Заранее найдите ветеринарного врача и обсудите профилактику, питание и индивидуальные потребности.</p></div></div><div><span>02</span><div><h3>Время быть рядом</h3><p>Прогулки, общение, отдых и спокойное обучение важны независимо от размера собаки.</p></div></div><div><span>03</span><div><h3>Ответственный выбор</h3><p>Узнавайте об условиях содержания и проверяйте сведения о здоровье и происхождении конкретного животного.</p></div></div></div></div></section>
+    <section class="about wrap section" id="about"><div><p class="eyebrow"><span class="line"></span> О ПРОЕКТЕ</p><h2>Пока мы только <em>знакомимся.</em></h2></div><div><p>«Рядом» — рабочее название чернового проекта. Сейчас это пространство для знакомства с породами и разговора об ответственной заботе.</p><p>Реальных объявлений, цен, контактов и приёма заявок здесь пока нет. Индивидуальные особенности собак могут отличаться от описания породы.</p><a class="text-link" href="#top">Вернуться наверх <span aria-hidden="true">↑</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✳</span> рядом<span class="brand-dot">.</span></a><p>Маленькие собаки. Большая забота.</p><span>ДЕМО-ПРОЕКТ · НЕ МАГАЗИН</span></div></footer>
+</body>
+</html>
