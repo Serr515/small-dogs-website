@@ -67,12 +67,13 @@ class UsefulContentTest(unittest.TestCase):
         for word in ('услови', 'документ', 'здоров', 'договор'):
             self.assertIn(word, text)
 
-    def test_catalog_is_an_honest_empty_state_with_no_form(self):
+    def test_catalog_marks_preliminary_offers_and_illustrative_photos(self):
         catalog = self.page.section('listings')
         self.assertIsNotNone(catalog, 'Добавьте пустой каталог объявлений')
-        self.assertIn('пока нет', catalog.content().lower())
+        self.assertIn('предваритель', catalog.content().lower())
+        self.assertIn('иллюстрируют породы', catalog.content().lower())
         self.assertEqual(list(catalog.descendants('form')), [])
-        self.assertEqual(list(catalog.descendants('article')), [])
+        self.assertEqual(len(list(catalog.descendants('article'))), 4)
 
     def test_faq_uses_native_accessible_details_with_answers(self):
         faq = self.page.section('faq')

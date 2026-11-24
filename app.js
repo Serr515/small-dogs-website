@@ -5,6 +5,38 @@ function filterBreeds(breeds, trait) {
 if (typeof module !== 'undefined') module.exports = { filterBreeds };
 
 if (typeof document !== 'undefined') {
+  const form = document.querySelector('#feedback-form');
+  const status = document.querySelector('#feedback-status');
+  if (form && location.protocol === 'file:') {
+    const preview = document.createElement('a');
+    preview.href = 'http://127.0.0.1:18743/#question';
+    preview.textContent = 'Открыть форму в локальной версии сайта';
+    form.replaceWith(preview);
+  } else if (form) {
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const button = form.querySelector('button');
+      button.disabled = true;
+      status.textContent = 'Отправляем…';
+      try {
+        const result = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'X-Feedback': '1' },
+          body: new URLSearchParams(new FormData(form))
+        });
+        if (result.status !== 204) throw new Error();
+        form.reset();
+        status.textContent = 'Спасибо! Ваше обращение получено.';
+      } catch {
+        status.textContent = 'Не удалось отправить. Попробуйте ещё раз или напишите в Telegram.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+}
+
+if (typeof document !== 'undefined') {
   const cards = Array.from(document.querySelectorAll('.breed-card')).map((element) => ({
     element,
     traits: element.dataset.traits.split(',')
